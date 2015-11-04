@@ -1,0 +1,34 @@
+{
+  "name": "conscientize-se",
+  "description": "conscientize-se site application",
+  "version": "0.0.0",
+  "homepage": "https://conscientize-se.github.io",
+  "repository": "conscientize-se/site-angularjs",
+  "license": "MIT",
+  "authors": [
+    "Raank <raank92@gmail.com> (https://raank.github.io/)"
+  ],
+  "dependencies": {
+    "connect": "",
+    "fs": "0.0.2",
+    "gulp": "",
+    "gulp-autoprefixer": "",
+    "gulp-dynamic": "",
+    "gulp-if": "",
+    "gulp-load-plugins": "",
+    "gulp-minify-css": "",
+    "gulp-notify": "",
+    "gulp-gzip": "^1.0.0",
+    "gulp-if": "",
+    "gulp-flatten": "0.0.4",
+    "gulp-gm": "",
+    "gulp-plumber": "",
+    "gulp-rename": "",
+    "gulp-rimraf": "",
+    "gulp-ruby-sass": "0.7.1",
+    "gulp-uglify": "",
+    "minimist": "",
+    "path": "",
+    "underscore": ""
+  }
+}

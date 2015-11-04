@@ -1,0 +1,19 @@
+{
+  "name": "conscientize-se",
+  "description": "conscientize-se site application",
+  "main": "src/js/main.js",
+  "authors": [
+    "raank <raank92@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/conscientize-se/site-angularjs",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
