@@ -1,0 +1,62 @@
+
+.home {
+    &__call {
+        background: $gradient-standard; /* W3C */
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        float: left;
+        &--valign {
+            height: 100%;
+            width: 100%;
+            float: left;
+            position: relative;
+            display: table;
+            h1 {
+                margin-top: 0;
+                font: {
+                    size: 68px;
+                    weight: 600;
+                }
+            }
+            p {
+                font: {
+                    size: 26px;
+                    weight: 300;
+                }
+            }
+        }
+        .valign {
+            &__content {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .find-it-out {
+            width: 100%;
+            float: left;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 99;
+            text-align: center;
+            span {
+                width: 100%;
+                float: left;
+                font-weight: 300;
+                &.text {
+                    font-size: 14px;
+                }
+                &.icon {
+                    font-size: 32px;
+                    .mdi {
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+

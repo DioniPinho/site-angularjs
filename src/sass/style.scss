@@ -1,0 +1,28 @@
+/*
+ * globals
+ */
+// bootstrap variables
+@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+// project variables
+@import "global/variables";
+
+/*
+ * libs
+ */
+// bootstrap ( getbootstrap.com )
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+// bootstrap material design
+@import "bootstrap-material-design/sass/material";
+@import "bootstrap-material-design/sass/ripples";
+// material design icons (materialdesignicons.com)
+@import "mdi/scss/materialdesignicons";
+// animate.css
+@import "animatewithsass/animate";
+
+/*
+ * layout
+ */
+// layout
+@import "layout/layout";
+@import "layout/home";

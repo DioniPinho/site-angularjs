@@ -1,16 +1,17 @@
-"use strict";
+'use strict';
 
-var gulp    = require( "gulp" );
-var plugins = require( "gulp-load-plugins" )({ lazy: false });
-var fs      = require( "fs" );
-var argv    = require( "minimist" )(process.argv.slice(1));
-var path    = require( "path" );
+var gulp    = require( 'gulp' );
+var plugins = require( 'gulp-load-plugins' )({ lazy: false });
+var fs      = require( 'fs' );
+var argv    = require( 'minimist' )(process.argv.slice(1));
+var path    = require( 'path' );
+var webserver = require( 'gulp-webserver' );
 
 var compactCSS = ( argv.d || argv.debug ? 'expanded' : 'compressed');
 
 gulp.task( 'styles', function() {
     gulp.src( 'src/sass/**/*.scss')
-    .pipe( plugins.plumber({errorHandler: plugins.notify.onError("Erro ao compilar os styles, <%= error.message %>")}))
+    .pipe( plugins.plumber({errorHandler: plugins.notify.onError('Erro ao compilar os styles, <%= error.message %>')}))
     
     .pipe( plugins.rubySass({
         loadPath        : ['bower_components'],
@@ -26,12 +27,12 @@ gulp.task( 'styles', function() {
     }))
     .pipe( plugins.if( !( argv.d || argv.debug ), plugins.minifyCss() ) )
     .pipe( gulp.dest( 'dist/css' ))
-    .pipe( plugins.if( argv.n || argv.notify, plugins.notify("CSS Compilado: <%= file.relative %>")) )
+    .pipe( plugins.if( argv.n || argv.notify, plugins.notify('CSS Compilado: <%= file.relative %>')) )
 });
 
 gulp.task( 'scripts', function() {
     gulp.src(['src/js/**/*.js', '!src/js/**/_*.js'])
-    .pipe( plugins.plumber({errorHandler: plugins.notify.onError("Erro ao compilar os scripts, <%= error.message %>")}) )
+    .pipe( plugins.plumber({errorHandler: plugins.notify.onError('Erro ao compilar os scripts, <%= error.message %>')}) )
     .pipe( plugins.dynamic({
         paths: ['bower_components']
     }))
@@ -40,7 +41,18 @@ gulp.task( 'scripts', function() {
         suffix: '.min'
     }))
     .pipe( gulp.dest( 'dist/js' ) )
-    .pipe( plugins.if(argv.n || argv.notify, plugins.notify("JS Compilado: <%= file.relative %>")) )
+    .pipe( plugins.if(argv.n || argv.notify, plugins.notify('JS Compilado: <%= file.relative %>')) )
+});
+
+gulp.task('webserver', function() {
+    gulp.src('./')
+        .pipe( webserver({
+            livereload: true,
+            directoryListing: false,
+            open: true,
+            fallback: 'index.html',
+            path: '/'
+        }) );
 });
 
 gulp.task( 'watch', function() {
@@ -49,4 +61,4 @@ gulp.task( 'watch', function() {
 });
 
 gulp.task('build', ['styles', 'scripts']);
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'webserver']);

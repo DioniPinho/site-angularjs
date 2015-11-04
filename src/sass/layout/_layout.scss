@@ -1,0 +1,50 @@
+
+body {
+    font: {
+        size: 14px;
+    }
+}
+
+/*
+ * simple helpers
+ */
+
+.text {
+    &-white {
+        color: #fff;
+    }
+}
+
+.btn {
+    &-colorcustom {
+        color: $color-primary;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+
+/*
+ * header components
+ */
+.navbar {
+    &-darken {
+        background-color: rgba(0,0,0,0.1);
+    }
+    &-brand, &-nav a {
+        font-weight: 300;
+    }
+}
+
+/*
+ * pages components
+ */
+.page {
+    width: 100%;
+    float: left;
+    font-size: 0;
+    p {
+        font-size: 14px;
+    }
+}
