@@ -1,4 +1,4 @@
-# frontend-site-angular
+# site-angularjs
 Front-end da aplicação com AngularJS
 
 ---
