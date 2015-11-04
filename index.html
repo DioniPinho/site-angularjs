@@ -5,10 +5,11 @@
     <title>conscientize-se</title>
     <base href="/">
     <script type="text/javascript" src="dist/js/lib/angular.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,700italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body class="page-home header-fixed">
-    <nav class="navbar navbar-darken navbar-fixed-top">
+    <nav class="navbar navbar-darken navbar-absolute-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header navbar-hiddentop">
@@ -22,7 +23,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-main">
-                <ul class="nav navbar-nav navbar-centered navbar-right">
+                <ul class="nav navbar-nav navbar-centered">
                     <li><a href="#quem-precisa">quem precisa</a></li>
                     <li><a href="#como-ajudar">como ajudar</a></li>
                     <li><a href="#apoio">apoio</a></li>
@@ -33,12 +34,6 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="page page-wrapper home" ng-view></div>
-
-    <div ng-controller="whoNeedsController">
-        <ul>
-            <li ng-repeat="post in list">{{ post.name }}</li>
-        </ul>
-    </div>
 
     <script src="dist/js/lib/jquery.min.js"></script>
     <script src="dist/js/main.min.js"></script>

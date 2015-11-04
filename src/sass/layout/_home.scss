@@ -22,7 +22,7 @@
             p {
                 font: {
                     size: 26px;
-                    weight: 300;
+                    weight: 100;
                 }
             }
         }
@@ -57,6 +57,12 @@
                 }
             }
         }
+    }
+
+    &__needs {
+        background: #ffeee9;
+        width: 100%;
+        float: left;
     }
 }
 

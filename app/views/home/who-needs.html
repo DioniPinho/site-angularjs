@@ -1,0 +1,24 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page__section--title clearfix">
+                    <h2>Quem está precisando</h2>
+                </div>
+                <div class="page__section--list col-md-8 col-md-offset-2" ng-controller="whoNeedsController">
+                    <ul class="row">
+                        <li class="item col-md-3" ng-repeat="item in list">
+                            <div class="item__image">
+                                <img src="images/who-needs/{{ item.slug }}.jpg" alt="{{ item.name }}" class="img-circle">
+                            </div>
+                            <div class="item__content">
+                                <h4 class="item__content--title">{{ item.name }}</h4>
+                                <span class="item__content--text">{{ item.city }} - {{ item.state }}/{{ item.country }}</span>
+                                <a href="/ajude/{{ item.slug }}" class="btn shadow-z-1 btn-gradient"><i class="mdi mdi-heart"></i> ajudar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,43 @@
+
+.page {
+    &__section {
+        width: 100%;
+        float: left;
+        padding: $padding-section 0;
+        &--title {
+            h2 {
+                color: $color-primary;
+                font: {
+                    family: $roboto-font;
+                    size: 48px;
+                    weight: 100;
+                }
+                text-align: center;
+                margin: 0 0 50px;
+            }
+        }
+        &--list {
+            .item {
+                &__image, &__content {
+                    text-align: center;
+                    @extend .clearfix;
+                }
+                &__content {
+                    color: $color-text;
+                    &--title {
+                        font: {
+                            size: 18px;
+                            weight: 300;
+                        }
+                    }
+                    &--text {
+                        font: {
+                            size: 14px;
+                            weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

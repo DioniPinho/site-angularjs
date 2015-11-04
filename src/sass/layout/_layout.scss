@@ -2,7 +2,18 @@
 body {
     font: {
         size: 14px;
+        family: $roboto-font;
     }
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+{
+    font-family: $roboto-font;
 }
 
 /*
@@ -16,14 +27,21 @@ body {
 }
 
 .btn {
+    font-weight: 100;
     &-colorcustom {
         color: $color-primary;
         &:hover {
             color: $color-secondary;
         }
     }
+    &-gradient {
+        background: $gradient-standard;
+        color: #fff !important;
+        &:focus, &:active {
+            color: #fff !important;
+        }
+    }
 }
-
 
 /*
  * header components
@@ -34,6 +52,27 @@ body {
     }
     &-brand, &-nav a {
         font-weight: 300;
+    }
+    &-absolute-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        .navbar {
+            &-header {
+                display: none;
+            }
+            &-centered {
+                float: none;
+                margin: 0 auto;
+                text-align: center;
+                li {
+                    float: none;
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
 

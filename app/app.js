@@ -19,14 +19,14 @@
     });
 
     app.controller('whoNeedsController', function($scope, $http) {
-        $scope.list = $http.get('who-needs.json')
-                        .success(function($data) {
-                            return $data;
-                        })
-                        .error(function($data) {
-                            return null;
-                        });
-                        
+        $http.get('who-needs.json')
+            .success(function($data) {
+                console.log($data);
+                $scope.list = $data;
+            })
+            .error(function($data) {
+                $scope.list = null;
+            });
     });
 
     app.run(['$rootScope', function($rootScope) {

@@ -2,8 +2,14 @@
 
 $color-primary:         #fd746c;
 $color-secondary:       #ff9068;
+$color-text:            #484747;
 
 $gradient-standard:     linear-gradient(90deg, $color-primary 10%, $color-secondary 90%);
 
 $material-font-path:    "../../fonts/bootstrap";
 $mdi-font-path:         "../../fonts/mdi";
+
+$roboto-font: 'Roboto', sans-serif;
+
+$padding-section:      50px;
+$padding-section-mob:  25px;
