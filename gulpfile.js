@@ -61,4 +61,4 @@ gulp.task( 'watch', function() {
 });
 
 gulp.task('build', ['styles', 'scripts']);
-gulp.task('default', ['watch', 'webserver']);
+gulp.task('default', ['build', 'watch', 'webserver']);
