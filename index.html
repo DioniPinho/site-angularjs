@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>conscientize-se</title>
-
+    <base href="/">
+    <script type="text/javascript" src="dist/js/lib/angular.min.js"></script>
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body class="page-home header-fixed">
@@ -31,29 +32,16 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <div class="page page-wrapper home">
-        <div class="home__call js-height-window">
-            <div class="home__call--valign valign">
-                <div class="valign__content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center text-white">
-                                <h1 class="animated fadeInDown">conscientize-se</h1>
-                                <p class="animated fadeInDown">Com alguns passos você pode ajudar, seja de qualquer maneira, não basta ter a intenção, temos que ter atitude, só assim o próximo terá a ajuda que realmente precisa.</p>
-                                <button class="btn btn-white shadow-z-1 btn-colorcustom animated fadeInDown">Saiba mais</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="find-it-out text-white">
-                <span class="text">Descubra +</span>
-                <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
-            </div>
-        </div>
+    <div class="page page-wrapper home" ng-view></div>
+
+    <div ng-controller="whoNeedsController">
+        <ul>
+            <li ng-repeat="post in list">{{ post.name }}</li>
+        </ul>
     </div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/lib/jquery.min.js"></script>
     <script src="dist/js/main.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
 </body>
 </html>

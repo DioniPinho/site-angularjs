@@ -5,7 +5,9 @@
     'use strict';
     $.material.init();
 
-    $('.js-height-window').each(function() {
-        $(this).height( $(window).innerHeight() );
+    $(window).on('load', function() {
+        $('.js-height-window').each(function() {
+            $(this).height( $(window).innerHeight() );
+        });
     });
 })(jQuery);
